@@ -1,55 +1,312 @@
-<section id="about">
-    <h2 class="section-title">About Us</h2>
-    <div class="about-content">
-        <p>
-            Expert Academy Mumbai is a trusted and well-established educational institute offering 
-            high-quality <strong>Home Tuition</strong> and <strong>Online Tuition</strong> services. 
-            Our mission is to provide personalized, one-to-one learning support that helps students 
-            strengthen their concepts and achieve outstanding academic performance.
-            <br><br>
-            We provide coaching for CBSE, ICSE, SSC, HSC, and also for competitive exams including 
-            JEE, NEET, Olympiads, and aptitude tests. Our team includes highly qualified and experienced 
-            teachers who understand each student's learning style and teach accordingly.
-            <br><br>
-            In our classes:
-            <br>✔ Students receive one-to-one personal attention  
-            <br>✔ Regular tests and doubt-solving sessions are conducted  
-            <br>✔ Progress reports are shared with parents  
-            <br>✔ Student’s speed, accuracy, confidence, and concept clarity are improved  
-        </p>
+<!DOCTYPE html>
+<html lang="en">
 
-        <br><hr style="margin:30px 0;"><br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Academy Mumbai | Home & Online Tuition</title>
+    <meta name="description"
+        content="Expert Academy Mumbai offers professional home tuition and online tuition for CBSE, ICSE, SSC, HSC, JEE & NEET with free demo class.">
 
-        <h3 style="font-size:28px; margin-bottom:15px;">Home Tuition Services</h3>
-        <p>
-            Our Home Tuition program aims to provide a comfortable, focused, and personalized learning 
-            environment right at the student’s home. All our tutors are verified, professional, and well-trained.
-            <br><br>
-            ✔ All subjects from Grade 1 to 12  
-            <br>✔ Individual attention without distractions  
-            <br>✔ Daily practice and homework support  
-            <br>✔ Complete syllabus coverage + Board exam preparation  
-            <br>✔ Flexible timings as per student’s convenience  
-            <br><br>
-            Home Tuition helps students understand concepts faster, increases comfort, and ensures 
-            immediate doubt-clearing.
-        </p>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        <br><hr style="margin:30px 0;"><br>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
 
-        <h3 style="font-size:28px; margin-bottom:15px;">Online Tuition Services</h3>
-        <p>
-            Our Online Tuition classes are conducted through Zoom or Google Meet using digital 
-            whiteboards, screen sharing, and interactive teaching methods. This mode ensures 
-            high-quality learning from the comfort of home.
-            <br><br>
-            ✔ Live one-to-one online sessions  
-            <br>✔ Recorded video for revision  
-            <br>✔ Digital notes, worksheets and assignments  
-            <br>✔ Weekly tests and performance tracking  
-            <br><br>
-            Online Tuition is ideal for students who prefer flexible timings and want to learn from 
-            expert teachers without traveling.
-        </p>
+        /* Top Bar */
+        .top-bar {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .top-bar .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .contact-info { display: flex; gap: 25px; flex-wrap: wrap; }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            height: 100px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            padding: 20px 0;
+            font-weight: 500;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 48px; }
+        .hero p { font-size: 20px; margin-top: 10px; }
+
+        .cta-button {
+            margin-top: 20px;
+            padding: 15px 40px;
+            background: #ff6b6b;
+            color: #fff;
+            border-radius: 50px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Sections */
+        section { padding: 70px 20px; }
+        .section-title { text-align: center; font-size: 36px; margin-bottom: 40px; }
+
+        /* About */
+        #about { background: #f8f9fa; }
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Services */
+        .services-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+        }
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            font-size: 20px;
+        }
+
+        /* Why Us */
+        #why {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+        }
+        .features-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap: 25px;
+        }
+        .feature-box {
+            background: rgba(255,255,255,0.2);
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        /* Contact */
+        #contact { background: #f8f9fa; }
+        .google-form-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            background: #25d366;
+            width: 60px;
+            height: 60px;
+            font-size: 35px;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span>📞 9839188179</span>
+                <span>📧 expertacademymumbai@gmail.com</span>
+            </div>
+            <div>📍 Mumbai – 400037</div>
+        </div>
     </div>
-</section>
+
+    <!-- NAV -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Expert Academy Mumbai">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <h1>Expert Academy Mumbai</h1>
+        <p>Professional Home Tuition & Online Tuition Services</p>
+        <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Free Demo Class</button>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <p>
+                Expert Academy Mumbai is a trusted and well-established educational institute offering 
+                high-quality <strong>Home Tuition</strong> and <strong>Online Tuition</strong> services. 
+                Our mission is to provide personalized, one-to-one learning support that helps students 
+                strengthen their concepts and achieve outstanding academic performance.
+                <br><br>
+                We provide coaching for CBSE, ICSE, SSC, HSC, and also for competitive exams including 
+                JEE, NEET, Olympiads, and aptitude tests. Our highly qualified and experienced faculty 
+                focuses on clarity, accuracy, and understanding for long-term learning success.
+                <br><br>
+                ✔ One-to-one personalised attention  
+                <br>✔ Regular tests and doubt-solving  
+                <br>✔ Progress reports to parents  
+                <br>✔ Improvement in speed & accuracy  
+            </p>
+
+            <br><hr><br>
+
+            <h3 style="font-size:28px; margin-bottom:10px;">Home Tuition Services</h3>
+            <p>
+                Our Home Tuition program aims to provide a comfortable, focused, and fully personalised learning 
+                experience at the student’s home. With verified and experienced home tutors:
+                <br><br>
+                ✔ All subjects from Grade 1 to 12  
+                <br>✔ Individual attention without distractions  
+                <br>✔ Daily practice and homework support  
+                <br>✔ Complete syllabus coverage + Board exam preparation  
+                <br>✔ Flexible timings as per student's schedule  
+            </p>
+
+            <br><hr><br>
+
+            <h3 style="font-size:28px; margin-bottom:10px;">Online Tuition Services</h3>
+            <p>
+                Online classes are conducted through Zoom / Google Meet using digital whiteboards, screen sharing, 
+                and interactive teaching methods.
+                <br><br>
+                ✔ Live one-to-one online sessions  
+                <br>✔ Recorded video revision  
+                <br>✔ Digital notes, worksheets and assignments  
+                <br>✔ Weekly tests and performance tracking  
+            </p>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+
+        <div class="services-grid">
+            <div class="service-card">🏠 <h3>Home Tuition</h3>Personalized one-to-one home classes</div>
+            <div class="service-card">💻 <h3>Online Tuition</h3>Live interactive digital learning</div>
+            <div class="service-card">📚 <h3>Exam Preparation</h3>JEE, NEET, Board Exam coaching</div>
+            <div class="service-card">📊 <h3>Progress Tracking</h3>Weekly tests and reports</div>
+        </div>
+    </section>
+
+    <!-- WHY -->
+    <section id="why">
+        <h2 class="section-title" style="color:white;">Why Choose Us?</h2>
+
+        <div class="features-grid">
+            <div class="feature-box">👨‍🎓 One-to-One Attention</div>
+            <div class="feature-box">🎓 Expert, Verified Tutors</div>
+            <div class="feature-box">❓ 24/7 Doubt Support</div>
+            <div class="feature-box">✅ Free Demo Class</div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="google-form-container">
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLScAYrCT0YmliJdHgSDyu0zZ4YUcH3PfNv3QzFMIB6IKVwOqBg/viewform?embedded=true"
+                width="100%" 
+                height="1100" 
+                frameborder="0">Loading…</iframe>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Expert Academy Mumbai — All Rights Reserved
+    </footer>
+
+    <!-- WHATSAPP BUTTON -->
+    <a class="whatsapp-float"
+        href="https://wa.me/919839188179?text=Hello%20Expert%20Academy,%20I%20need%20Home%20or%20Online%20Tuition."
+        target="_blank">💬</a>
+
+</body>
+</html>
